@@ -9,7 +9,7 @@ Este repositório contém um arquivo `docker-compose.yml` para configurar um amb
 2. Navegue até o diretório clonado:
 
    ```bash
-   cd seu-repositorio
+   cd keycloak-server-dev
    ```
 
 3. Inicie os serviços utilizando Docker Compose:

@@ -76,6 +76,15 @@
         "attributes": {}
       },
       {
+        "id": "52bf6bbd-f514-432b-9f3c-e76a68e64baf",
+        "name": "user",
+        "description": "",
+        "composite": false,
+        "clientRole": false,
+        "containerId": "8fd0e1c8-3bb9-4db9-97db-dbb6eb2f5c12",
+        "attributes": {}
+      },
+      {
         "id": "d924c8b1-99d3-4e0d-aa82-203a79d3d249",
         "name": "offline_access",
         "description": "${role_offline-access}",
@@ -662,10 +671,12 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
-        "http://localhost:8081/*"
+        "http://localhost:8081/*",
+        "http://localhost:3000/*"
       ],
       "webOrigins": [
-        "http://localhost:8081"
+        "http://localhost:8081",
+        "http://localhost:3000"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -679,6 +690,7 @@
       "protocol": "openid-connect",
       "attributes": {
         "oidc.ciba.grant.enabled": "false",
+        "display.on.consent.screen": "false",
         "oauth2.device.authorization.grant.enabled": "false",
         "backchannel.logout.session.required": "true",
         "backchannel.logout.revoke.offline.tokens": "false"
@@ -691,6 +703,7 @@
         "acr",
         "roles",
         "profile",
+        "microprofile-jwt",
         "email"
       ],
       "optionalClientScopes": [
@@ -1086,8 +1099,8 @@
           "consentRequired": false,
           "config": {
             "id.token.claim": "true",
-            "access.token.claim": "true",
             "introspection.token.claim": "true",
+            "access.token.claim": "true",
             "userinfo.token.claim": "true"
           }
         },

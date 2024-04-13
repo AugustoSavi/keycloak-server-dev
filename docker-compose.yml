@@ -29,7 +29,7 @@ services:
       - KC_DB_PASSWORD=password
       - KC_HEALTH_ENABLED=true
     ports:
-      - "8080:8080"
+      - "8443:8080"
     command: start-dev
     depends_on:
       - postgres
